@@ -1,0 +1,104 @@
+.block {
+   // background: #78BA91;
+    height: 64px;
+    width: 64px;
+    background-repeat: no-repeat;
+   // border:1px solid #555;
+ //  -webkit-box-shadow: inset 0 0 5px #fff;
+  //  -moz-box-shadow: inset 0 0 5px #fff;
+ //   box-shadow: inset 0 0 5px #fff;
+	//-webkit-border-radius: 4px;
+	//-webkit-border-radius: 4px;
+	//-moz-border-radius: 4px;
+	//-moz-border-radius: 4px;
+//	border-radius: 4px;
+    border:0px dashed #f00;
+    border-radius:10px;
+    
+
+}
+
+.move_block
+{
+    -moz-transform:  rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+    z-index: 1000;
+}
+
+.stack_block:hover
+{
+    -moz-transform:  rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+    z-index: 1000;
+}
+
+.active_block
+{
+    -webkit-box-shadow: inset 0 0 25px #f22;
+    -moz-box-shadow: inset 0 0 25px #f22;
+    box-shadow: inset 0 0 25px #f22;
+    
+}
+
+.appended_block:hover
+{
+    z-index: 0;
+}
+
+.appended_block:hover
+{
+    -webkit-box-shadow: 0 0 20px 5px #fff;
+    -moz-box-shadow: 0 0 20px 5px #fff;
+    box-shadow: 0 0 20px 5px #fff; 
+	
+}
+
+.selected_block
+{
+  -webkit-box-shadow: inset 0 0 25px #22f;
+    -moz-box-shadow: inset 0 0 25px #22f;
+    box-shadow: inset 0 0 25px #22f;
+}
+
+.stop { background-image: url('images/blocks/stop.png');}
+.up_down { background-image: url('images/blocks/line_up_down.png'); }
+.left_right { background-image: url('images/blocks/line_left_right.png'); }
+.left_up{ background-image: url('images/blocks/line_left_up.png'); }
+.left_down{ background-image: url('images/blocks/line_left_down.png'); }
+
+.right_up { background-image: url('images/blocks/line_right_up.png'); }
+//#app_table .right_up { background-image: url('images/blocks/line_right_up_appended.png'); }
+//#app_table .right_up:hover { background-image: url('images/blocks/line_right_up.png'); }
+
+.right_down { background-image: url('images/blocks/line_right_down.png'); }
+.start { background-image: url('images/blocks/start.png'); }
+.cross_left { background-image: url('images/blocks/cross_up_right.png'); }
+.cross_right{ background-image: url('images/blocks/cross_up_left.png'); }
+.cross_right_left_down{ background-image: url('images/blocks/cross_right_left_down.png'); }
+.cross_left_right_down{ background-image: url('images/blocks/cross_left_right_down.png'); }
+.cross_up_left_right{ background-image: url('images/blocks/cross_up_left_right.png'); }
+.cross { background-image: url('images/blocks/cross.png'); }
+.operations { background-image: url('images/blocks/operations.png'); }
+.if { background-image: url('images/blocks/if.png'); }
+.in { background-image: url('images/blocks/in.png'); }
+.out{ background-image: url('images/blocks/out.png'); }
+.msg{ background-image: url('images/blocks/msg.png'); }
+.log{ background-image: url('images/blocks/log.png'); }
+.red { background-image: url('images/blocks/red.png'); }
+.blue { background-image: url('images/blocks/left_right.png'); }
+.test { background-image: url('images/blocks/test.png'); }
+.timer { background-image: url('images/blocks/clock.png'); }
+.sleep { background-image: url('images/blocks/pause.png'); }
+.light_on { background-image: url('images/blocks/light.png'); }
+//.light_off { background-image: url('images/blocks/light.png'); }
+
+//#app_table > div.start:hover
+//{
+	//background-image: url('images/blocks/start_run.png');
+	//left:64px;
+	//top:64px;
+//}

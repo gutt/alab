@@ -1,0 +1,20 @@
+.mBox.Core-Eli {
+    font-size: 16px;
+	
+}
+.mBox.Core-Eli .mBoxContainer {
+    background: #e0fde9;
+	border:0px solid #fff;
+	text-align:center;
+	border-radius:15px;
+	opacity:0.9;
+}
+
+
+.mBox.Core-Eli .mBoxTitle {
+    padding: 10px;
+	font-weight: 900;
+}
+.mBox.Core-Eli .mBoxContent {
+    padding: 20px;
+}

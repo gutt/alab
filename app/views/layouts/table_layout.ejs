@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<title>A.Lab</title>
+		
+		<%- stylesheetLinkTag('blocks', 'style') %>
+		<%- stylesheetLinkTag('mbox/assets/mBoxCore', 'mbox/assets/mBoxModal', 'mbox/assets/mBoxNotice', 'mbox/assets/mBoxTooltip') %>
+		<%- stylesheetLinkTag('mbox/assets/themes/mBoxTooltip-Black') %>
+		<%- stylesheetLinkTag('eli_mbox') %>
+	
+		<%- javascriptIncludeTag('mootools', 'mootools-more') %>
+		<%- javascriptIncludeTag('mbox/mBox.Core', 'mbox/mBox.Modal', 'mbox/mBox.Modal.Confirm') %>
+		<%- javascriptIncludeTag ('eli/ev_parser', 'eli/eli_actions', 'eli/eli_blocks_func', 'eli/eli_program', 'eli/eli_desktop_drag', 'eli/eli_events', 'eli/eli') %>
+	</head>
+	
+	<body>
+            <% var flash = request.flash('info').pop(); if (flash) { %>
+                <div class="alert alert-info">
+                    <a class="close" data-dismiss="alert">×</a>
+                    <%- flash %>
+                </div>
+            <% } %>
+
+            <% flash = request.flash('error').pop(); if (flash) { %>
+                <div class="alert alert-error">
+                    <a class="close" data-dismiss="alert">×</a>
+                    <%- flash %>
+                </div>
+            <% }; %>
+
+            <%- body %>
+    </body>
+</html>
+<%- contentFor('javascripts') %>

@@ -1,0 +1,172 @@
+body
+{
+background: url('bg.png');
+color:#333;
+#font-family:Arial,Lucida Sans Unicode,Verdana;
+#font-family: Helvetica,Arial,"Liberation Sans",FreeSans,sans-serif;
+font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+
+}
+a:link {text-decoration: none; color:#333;}
+a:visited {text-decoration: none;color:#333;}
+a:active {text-decoration: none;color:#333;}
+a:hover {text-decoration: underline; color: red;}
+
+#content
+{
+width:100%;
+margin:auto;
+}
+
+#logo
+{
+background: url('logo.png');
+width:260px;
+height:94px;
+background-repeat: no-repeat;
+float:left;
+margin:20px;
+}
+
+#fake_login
+{
+background: url('fake_login.png');
+width:350px;
+height:94px;
+background-repeat: no-repeat;
+float:right;
+margin:0px;
+}
+#new .content
+{
+	margin-left:200px;
+	margin-top:10px;
+	padding:10px;
+}
+#new .content h1
+{
+margin-top:60px;
+}
+
+#new .content img
+{
+float:left;
+clear:left;
+margin:10px;
+margin-bottom:20px;
+}
+
+
+#new
+{
+width:100%;
+padding:0px;
+margin:auto;
+clear:both;
+background-color:#d0edd9;
+//box-shadow: 0px 0px 100px #000;
+box-shadow: 0px 20px #72cb8c, 0px -20px #72cb8c;
+//border-radius:5px;
+//width:500px;
+display:inline-block;
+}
+
+#recent
+{
+top:-200px;
+width:30%;
+padding:20px;
+position:relative;
+margin:0px auto;
+margin-top:40px;
+float:right;
+overflow:visible;
+background-color:#d0edd9;
+box-shadow: 0px 20px #72cb8c;
+min-height:200px;
+}
+
+#recent h1
+{
+	clear:right;
+}
+.algorithm
+{
+	padding:10px;
+	margin:5px;
+	clear:both;
+	//background-color:#ddd;
+	//box-shadow: 0px 0px 1px #555;
+	border-radius:5px;
+	display:inline-block;
+	width:95%;
+	font-size:16px;
+}
+.algorithm p
+{
+	width:100%;
+}
+.algorithm h2
+{
+	padding: 5px;
+	font-weight:bold;
+}
+.algorithm img
+{
+	border-radius: 10px;
+	margin-right: 5px;
+}
+h1
+{
+font-size:36px!important;
+line-height:24px!important;
+margin-bottom:10px!important;
+}
+
+h1
+{
+#	font-family:Arial,Lucida Sans Unicode,Verdana;
+#	font-family: Helvetica,Arial,"Liberation Sans",FreeSans,sans-serif;
+	font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+
+	font-size:170%;
+	margin-bottom:7px;
+	line-height:0.3;
+	text-shadow:1px 1px #fff;
+	font-variant:small-caps;
+//	letter-spacing:1px;
+        font-weight: bold;
+	color: #333;
+	font-size: 24px;
+	line-height: 1.2em;
+}
+.blue
+{
+color: #4a3faa;
+}
+h2
+{
+#	font-family:Arial,Lucida Sans Unicode, Verdana;
+#	font-family: Helvetica,Arial,"Liberation Sans",FreeSans,sans-serif;
+	font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+
+	font-size:120%;
+	margin-bottom:7px;
+	line-height:1.1;
+	text-shadow:1px 1px #eee;
+	font-variant:small-caps;
+	font-weight: bold;
+	color: #333;
+	font-size: 24px;
+	line-height: 1.2em;
+}
+
+#recent h1
+{
+float:left;
+padding:10px;
+}
+#recent img
+{
+float:left;
+}

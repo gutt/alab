@@ -1,0 +1,595 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a:link {text-decoration: none; color:#333;}
+a:visited {text-decoration: none;color:#333;}
+a:active {text-decoration: none;color:#333;}
+a:hover {text-decoration: underline; color: red;}
+/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+
+
+div.drag
+{
+	cursor: move;
+    z-index:24; 
+	text-decoration:none;
+}
+
+#output textarea {
+outline:none;
+background: #d0edd9;
+border:0px solid #fff;
+}
+
+
+#app_table > div.drag {z-index:9999; }
+#app_table > div.drag span.tooltip{display: none;}
+#app_table span.tooltip {display: none;left:-9999px;}
+#app_table > div.drag:hover span.tooltip
+{ 
+    display:block;
+    position:absolute;
+    top:-15px; left:48px; width:16px;
+    text-align: center;
+	height:16px;
+	opacity:0.8;
+	cursor:pointer;
+	background-image: url('images/x.png');
+}
+
+#app_table > div.drag span.popup p
+{
+	padding:5px;
+}
+h1
+{
+	font-weight:900;
+	font-size:120%;
+	padding:5px;
+}
+
+#app_table h1
+{
+	font-weight:900;
+	font-size:120%;
+	padding:5px;
+}
+.variable
+{
+	cursor: pointer;
+	padding:5px;
+	float:left;
+}
+.select_variable
+{
+	cursor:pointer;
+	font-weight:900;
+	padding:5px;
+}
+.select_math_operations
+{
+	cursor:pointer;
+	font-weight:900;
+	padding:5px;
+	
+}
+
+#app_table > div.drag span.popup
+{ 
+	padding:5px;
+    display:block;
+    position:absolute;
+    top:-1px; left:62px; 
+	min-width:440px;
+    border:1px solid #0cf;
+    background-color:#cff; color:#000;
+ 	//height:161px;
+	-webkit-border-radius: 15px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius: 15px;
+	-moz-border-radius-topleft: 0;
+	border-radius: 15px;
+	border-top-left-radius: 0;
+	opacity:0.8;
+	z-index:1000;
+	font-size:80%;
+	cursor:default;
+}
+
+
+#output	 {
+	z-index:1; 
+	position:absolute;
+	top:30px;
+	right:10px; 
+	width:215px; 
+	bottom:25px; 
+	background:#d0edd9;
+	display:none;
+	margin:5px;
+	text-align:left;
+	border-radius:15px;
+	opacity:0.7;
+	overflow: hidden;
+	padding:15px;
+}
+
+
+#show_log {
+	opacity: 0.9;
+	z-index:1; 
+	background:#d0edd9;
+	border-radius:15px;
+	position:absolute;
+	padding-top:2px;
+	top:5px;
+	right:10px; 
+	width:250px;
+	height:20px; 
+	display:block;
+	margin:0px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.toolbox_func
+{
+	display:block;
+}
+.toolbox_main
+{
+	display:none;
+}
+#toolbox_navi {
+	z-index:1; 
+	position:absolute;
+	bottom:0px;
+	left:0px; 
+	width:160px; 
+	bottom:70px;
+}
+#top_panel {
+	z-index:2; 
+	position:absolute;
+	top:0px;
+	left:0px; 
+	width:157px; 
+	height:45px; 
+	background-image: url('images/up_bg.png');
+	background-repeat: repeat;
+}
+#toolbox{
+	z-index:1; 
+	position:absolute;
+	bottom:0px;
+	left:0px; 
+	width:160px;
+	background-image: url('images/toolbox_background.png');
+	top:45px;
+	
+	background-repeat: repeat-y;
+}
+
+#desktop {
+	cursor: move;
+	overflow: hidden;
+	z-index:0; 
+	position:absolute; 
+	top:0px; 
+	right:0px;
+	bottom:0px;
+	left:0px; 
+	background:#0f0;
+}
+
+.select_box
+{
+	position:absolute;
+	background-color: #00f;
+	opacity:0.65;
+	border: 2px solid #333;
+	width:10px;
+	height:10px;
+	z-index:9999;
+	
+}
+
+
+
+#desktop > div {
+	background: #DDD;
+	padding: 0px 0;
+}
+
+
+#desktop > div {
+  padding: 0;
+  height: 3028px;
+  width: 3652px;
+  background-image: url('images/bg.png');
+}
+
+#right_buttons > a DIV 
+{
+	z-index:0; 
+	position:absolute;
+	padding:0px; 
+	margin:0px; 
+	width:30px; 
+	height:30px; 
+	color:#fff;
+	top:5px;
+//	border: 1px solid #eee;
+}
+
+#right_buttons > a DIV:hover
+{
+	//border: 1px solid #22f;
+	 -webkit-box-shadow: inset 0 0 15px #22f;
+    -moz-box-shadow: inset 0 0 15px #22f;
+    box-shadow: inset 0 0 15px #22f;
+}
+#right_buttons > a DIV.active
+{
+	//border: 1px solid #f22;
+	// -webkit-box-shadow: inset 0 0 15px #f22;
+    //-moz-box-shadow: inset 0 0 15px #f22;
+    //box-shadow: inset 0 0 15px #f22;
+}
+
+#home_button {
+	background-image: url('images/home.png');
+	width:25px;
+	height:25px;
+	margin:8px;
+	float:left;
+	margin-left:22px;
+}
+
+
+#step_button {
+	background-image: url('images/step.png');
+	left:160px;
+}
+
+#run_button {
+	background-image: url('images/play.png');
+	left:200px;
+}
+
+#pause_button {
+	background-image: url('images/pause.png');
+	left:280px;
+}
+
+#save_button {
+	background-image: url('images/save.png');
+	width:25px;
+	height:25px;
+	margin:6px;
+	float:left;
+	margin-left:10px;
+	cursor:pointer;
+}
+#save_as_button {
+	background-image: url('images/save_as.png');
+	width:25px;
+	height:25px;
+	margin:6px;
+	float:left;
+	margin-left:15px;
+	cursor:pointer;
+}
+
+#load_button {
+	background-image: url('images/load.png');
+}
+
+#run_fast_button {
+	background-image: url('images/play_fast.png');
+	left:240px;
+}
+#run_node_button {
+	background-image: url('images/play_fast.png');
+	left:340px;
+}
+
+#toolbox_buttons > a DIV 
+{
+	z-index:2; 
+	position:absolute;
+	padding:0px; 
+	margin:0px; 
+	width:64px; 
+	height:64px; 
+	color:#fff;
+	right:240px;
+}
+#prev_button {
+	background-image: url('images/prev.png');
+	left:0px;
+}
+
+#next_button {
+	background-image: url('images/next.png');
+	left:80px;
+}
+
+
+.wrapper {
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+ -webkit-transform: translateZ(0); /* webkit flicker fix */
+
+
+}
+.block_tooltip
+{
+ opacity: 0;
+}
+
+#toolbox .block_tooltip {
+
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 15px;
+  text-shadow: 1px 1px #000;
+  color: #fff;
+  text-align: center;
+  background: #f4a91f;
+  bottom: 0%;
+  color: #fff;
+  display: block;
+  left: 74px;
+  margin-bottom: 15px;
+  padding-right:20px;
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  width: 120%;
+  -webkit-transform: translateX(-10px);
+     -moz-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+       -o-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+#toolbox .wrapper .block_tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+#toolbox .wrapper .block_tooltip:after {
+  border-top: solid transparent 7px;
+  border-bottom: solid transparent 7px;
+  border-right: solid #f4a91f 7px;
+  left: 8px;
+  content: " ";
+  height: 0;
+  bottom: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+  
+#toolbox .wrapper:hover .block_tooltip {
+  opacity: 0.95;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+#toolbox .lte8 .wrapper .block_tooltip {
+  display: none;
+}
+
+#toolbox .lte8 .wrapper:hover .block_tooltip {
+  display: block;
+}
+
+
+#top_panel .block_tooltip {
+
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 15px;
+  text-shadow: 1px 1px #000;
+  color: #fff;
+  text-align: center;
+  background: #6469cf;
+  bottom: -50px;
+  color: #fff;
+  display: block;
+  left: 0px;
+  margin-bottom: 0px;
+  padding-right:0px;
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  width: 100px;
+  -webkit-transform: translateY(-10px);
+     -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+       -o-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+#top_panel .wrapper .block_tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+
+  
+#top_panel .wrapper:hover .block_tooltip {
+  opacity: 0.85;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+#top_panel .lte8 .wrapper .block_tooltip {
+  display: none;
+}
+
+#top_panel .lte8 .wrapper:hover .block_tooltip {
+  display: block;
+}
+
+
+/* Scrollbar CSS */
+.scrollbar {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+	z-index:2; 
+	position:absolute;
+	top:30px;
+	right:10px; 
+	width:20px; 
+	height:90%; 
+}
+
+.scrollbar .knob 
+{
+
+    background: #666;
+    width: 7px;
+    height: 50px;
+    margin: 0 7px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+.scrollbar .knob:hover {
+    -moz-opacity: 1;
+    opacity: 1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+*:focus {
+    outline: none;
+}
+textarea, input{
+	border:1px solid #aab;
+	border-radius:8px;
+	background:#fff;
+	padding:5px;
+}
+
+textarea:focus, input:focus{
+	border:1px solid #aab;
+	border-radius:8px;
+	background:#ffffee;
+	
+}
+/* End Scrollbar CSS */
