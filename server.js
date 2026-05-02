@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const os = require('os');
 const path = require('path');
 const express = require('express');
 
@@ -30,7 +31,15 @@ if (require.main === module) {
     const port = process.env.PORT || 3000;
     const host = process.env.HOST || '0.0.0.0';
     app.listen(port, host, () => {
-        console.log(`alab listening on http://${host}:${port}`);
+        console.log(`alab listening on:`);
+        console.log(`  http://localhost:${port}`);
+        for (const ifaces of Object.values(os.networkInterfaces())) {
+            for (const iface of ifaces || []) {
+                if (iface.family === 'IPv4' && !iface.internal) {
+                    console.log(`  http://${iface.address}:${port}`);
+                }
+            }
+        }
     });
 }
 
