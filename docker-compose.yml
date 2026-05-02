@@ -1,0 +1,10 @@
+services:
+  alab:
+    build: .
+    image: alab:latest
+    container_name: alab
+    restart: unless-stopped
+    ports:
+      - "${ALAB_PORT:-3001}:3000"
+    environment:
+      NODE_ENV: production
